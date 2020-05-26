@@ -6,11 +6,13 @@
         <p>{{ post.body }}</p>
     </div>
 
-    <a href="{% url 'post_edit' post.pk %}">Редактирование публикации</a>
-    <br>
     {% if post.image %}
         <img src="{{post.image.url}}">
+    {% elif post.file %}
+        <a href="{{post.file.url}}"> Файл: {{ post.file }}</a>
     {% else %}
-    Нет картинки
+    <p>Прикреплённых файлов нет</p>
     {% endif %}
+    <br><br><br>
+    <a href="{% url 'post_edit' post.pk %}">Редактирование публикации</a>
 {% endblock content %}

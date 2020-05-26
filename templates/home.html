@@ -6,6 +6,12 @@
         <div class="post-entry">
             <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.body }}</p>
+            {% if post.image %}
+                <p>Картинка: {{ post.image }}</p>
+            {% elif post.file %}
+                <p>Приложение: {{ post.file }}</p>
+            {% endif %}
+
         </div>
     {% endfor %}
 {% endblock content %}

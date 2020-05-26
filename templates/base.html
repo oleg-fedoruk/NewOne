@@ -8,18 +8,18 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:���" rel="\ stylesheet">
 </head>
 <body>
-<div class="container">
-    <header>
-        <div class="nav-left">
-            <h1><a href="/">Тестовое задание</a></h1>
-        </div>
-        <div class="nav-right">
-            <a href="{% url 'post_new' %}">Добавить запись</a>
-        </div>
-    </header>
-    {% block content %}
+    <div class="container">
+        <header>
+            <div class="nav-left">
+                <h1><a href="/">Тестовое задание</a></h1>
+            </div>
+            <div class="nav-right">
+                <a href="{% url 'post_new' %}">Добавить запись</a>
+            </div>
+        </header>
+        {% block content %}
 
-    {% endblock content %}
-</div>
+        {% endblock content %}
+    </div>
 </body>
 </html>

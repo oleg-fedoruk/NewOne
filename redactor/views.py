@@ -22,5 +22,6 @@ class RedCreateView(CreateView):
 
 class RedUpdateView(UpdateView):
     model = Post
-    fields = ['title', 'body']
+    fields = ['title', 'body', 'image']
     template_name = 'post_edit.html'
+
